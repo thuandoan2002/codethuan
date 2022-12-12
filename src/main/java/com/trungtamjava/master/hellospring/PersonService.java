@@ -19,4 +19,8 @@ public class PersonService {
     public Optional<Person> getById(Integer id) {
         return personRepo.findById(id);
     }
+
+    public void logout() {
+        System.out.println("User have logout.");
+    }
 }
