@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form th:action="@{/person/search}" method="get"></form>
+<input name="min">
+<input name="max">
+<input name="page">
+<input name="size" value="10">
+<button type="submit">Search</button>
+
+</form>
+
+
+<body>
+<a th:href="@{/person/list}">Danh sach person</a>
+<p th:text="${person.id}"></p>
+<p th:text="${person.name}"> </p>
+<p th:text="${person.age}"> </p>
+<td>
+    <a th:href="@{'/person/delete?id=' + ${p.id}}">Delete</a>
+</td>
+
+</body>
+</html>

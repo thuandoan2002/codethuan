@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/person/search}" method="get"></form>
+<input name="min">
+<input name="max">
+<input name="page">
+<input name="size" value="10">
+<button type="submit">Search</button>
+
+</form>
+
+
+
+
+<table>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Age</th>
+  </tr>
+  <!-- for list person-->
+  <tr th:each="p : ${list}">
+      <td th:text="${p.id}"></td>
+      <td th:text="${p.name}"></td>
+      <td th:text="${p.age}"></td>
+      <td>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

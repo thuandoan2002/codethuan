@@ -10,8 +10,11 @@ public class HelloController {
 
     //localhost:8080/api/hello-spring
     @GetMapping("/hello-spring")
-    public  String hello(Model model) {
+    public String hello(Model model) {
         model.addAttribute("msg", "Helle Spring Framework");
-        return  "hi";  //view
+        return "hi";  //view
+        return "hi";
+        return "hi";
+        return "hi";
     }
 }
